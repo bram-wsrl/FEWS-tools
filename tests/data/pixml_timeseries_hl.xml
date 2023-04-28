@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.2">
+    <timeZone>0.0</timeZone>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>Q.R.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>m3/s</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>Q.R.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>m3/s</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="0" flag="0"/>
+        <event date="2023-04-11" time="11:38:45" value="0" flag="0"/>
+        <event date="2023-04-11" time="15:12:00" value="0" flag="0"/>
+        <event date="2023-04-11" time="23:12:00" value="0" flag="0"/>
+        <event date="2023-04-12" time="01:27:31" value="0" flag="0"/>
+        <event date="2023-04-12" time="07:12:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>OW000632</locationId>
+            <parameterId>H.M.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>KGM_067107_Ameide, Broekseweg_Hben</stationName>
+            <units>mNAP</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="-1.526" flag="0"/>
+        <event date="2023-04-11" time="11:38:37" value="-1.532" flag="0"/>
+        <event date="2023-04-11" time="15:12:00" value="-1.521" flag="0"/>
+        <event date="2023-04-11" time="18:46:44" value="-1.511" flag="0"/>
+        <event date="2023-04-11" time="19:19:35" value="-1.521" flag="0"/>
+        <event date="2023-04-11" time="19:25:35" value="-1.511" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>OW000632</locationId>
+            <parameterId>H.M.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>KGM_067107_Ameide, Broekseweg_Hben</stationName>
+            <units>mNAP</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="-1.526" flag="0"/>
+        <event date="2023-04-11" time="11:38:37" value="-1.532" flag="0"/>
+        <event date="2023-04-11" time="15:12:00" value="-1.521" flag="0"/>
+        <event date="2023-04-11" time="18:46:44" value="-1.511" flag="0"/>
+        <event date="2023-04-11" time="19:19:35" value="-1.521" flag="0"/>
+        <event date="2023-04-11" time="19:25:35" value="-1.511" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>OW000631</locationId>
+            <parameterId>H.M.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>KGM_067107_Ameide, Broekseweg_Hbov</stationName>
+            <units>mNAP</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="-1.418" flag="0"/>
+        <event date="2023-04-11" time="11:38:38" value="-1.41" flag="0"/>
+        <event date="2023-04-11" time="12:14:03" value="-1.408" flag="0"/>
+        <event date="2023-04-11" time="15:12:00" value="-1.4" flag="0"/>
+        <event date="2023-04-11" time="19:14:51" value="-1.39" flag="0"/>
+        <event date="2023-04-11" time="23:12:00" value="-1.382" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>OW000631</locationId>
+            <parameterId>H.M.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>KGM_067107_Ameide, Broekseweg_Hbov</stationName>
+            <units>mNAP</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="-1.418" flag="0"/>
+        <event date="2023-04-11" time="11:38:38" value="-1.41" flag="0"/>
+        <event date="2023-04-11" time="12:14:03" value="-1.408" flag="0"/>
+        <event date="2023-04-11" time="15:12:00" value="-1.4" flag="0"/>
+        <event date="2023-04-11" time="19:14:51" value="-1.39" flag="0"/>
+        <event date="2023-04-11" time="23:12:00" value="-1.382" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>BS.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>-</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="2" flag="0"/>
+        <event date="2023-04-11" time="11:38:35" value="2" flag="0"/>
+        <event date="2023-04-12" time="00:08:16" value="1" flag="0"/>
+        <event date="2023-04-12" time="01:27:21" value="1" flag="0"/>
+        <event date="2023-04-12" time="21:41:03" value="2" flag="0"/>
+        <event date="2023-04-12" time="21:41:13" value="1" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>BS.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>-</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>SH.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>%</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="80.9" flag="0"/>
+        <event date="2023-04-11" time="11:38:39" value="80.9" flag="0"/>
+        <event date="2023-04-11" time="15:12:00" value="80.9" flag="0"/>
+        <event date="2023-04-11" time="23:12:00" value="80.9" flag="0"/>
+        <event date="2023-04-12" time="00:08:08" value="78.3" flag="0"/>
+        <event date="2023-04-12" time="00:08:09" value="62.3" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>SH.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>%</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>TT.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>-</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="1181" flag="0"/>
+        <event date="2023-04-11" time="11:38:38" value="1181" flag="0"/>
+        <event date="2023-04-11" time="12:05:16" value="1179" flag="0"/>
+        <event date="2023-04-11" time="12:05:18" value="1181" flag="0"/>
+        <event date="2023-04-11" time="15:12:00" value="1181" flag="0"/>
+        <event date="2023-04-11" time="23:12:00" value="1181" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>TT.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>-</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>PF.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>Hz</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>PF.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>Hz</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>A.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>-</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>A.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>-</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>SD.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>mNAP</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>SD.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>mNAP</units>
+        </header>
+        <event date="2023-04-11" time="11:20:46" value="-1.299" flag="0"/>
+        <event date="2023-04-11" time="11:38:47" value="-1.299" flag="0"/>
+        <event date="2023-04-11" time="15:12:00" value="-1.299" flag="0"/>
+        <event date="2023-04-11" time="23:12:00" value="-1.299" flag="0"/>
+        <event date="2023-04-12" time="01:27:33" value="-1.299" flag="0"/>
+        <event date="2023-04-12" time="07:12:00" value="-1.299" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>MWAR.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>%</units>
+        </header>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>MWAR.0</parameterId>
+            <timeStep unit="nonequidistant"/>
+            <startDate date="2023-04-01" time="10:45:00"/>
+            <endDate date="2023-04-18" time="10:45:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>%</units>
+        </header>
+    </series>
+</TimeSeries>
