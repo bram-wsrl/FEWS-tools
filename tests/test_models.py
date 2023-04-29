@@ -1,6 +1,6 @@
 import unittest
 
-from lib.models import GroupSet
+from lib.dtypes import GroupSet
 
 
 class TestGroupSet(unittest.TestCase):

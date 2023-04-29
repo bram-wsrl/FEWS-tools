@@ -4,14 +4,13 @@ import datetime as dt
 import xml.etree.ElementTree as ET
 
 from lib.utils import ns
-from scripts.pixml2csv import TimeSerie
+from lib.models import TimeSerie
 from tests import DATAPATH, PIXML_TIMESERIES_SL, PIXML_TIMESERIES_HL
 
 
 class TestTimeSerieInstances(unittest.TestCase):
     namespace = "http://www.wldelft.nl/fews/PI"
     pixml_timeseries_sl = DATAPATH / PIXML_TIMESERIES_SL
-    pixml_timeseries_hl = DATAPATH / PIXML_TIMESERIES_HL
 
     def setUp(self):
         self.tree = ET.parse(self.pixml_timeseries_sl)
