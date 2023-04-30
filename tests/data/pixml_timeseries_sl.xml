@@ -8,7 +8,7 @@
             <parameterId>H.M.5</parameterId>
             <timeStep unit="second" multiplier="300"/>
             <startDate date="2018-04-12" time="09:15:00"/>
-            <endDate date="2023-04-14" time="09:15:00"/>
+            <endDate date="2018-04-12" time="09:50:00"/>
             <missVal>NaN</missVal>
             <stationName>KGM_067107_Ameide, Broekseweg_Hbov</stationName>
             <units>mNAP</units>
@@ -29,7 +29,7 @@
             <parameterId>H.M.5</parameterId>
             <timeStep unit="second" multiplier="300"/>
             <startDate date="2018-04-12" time="09:15:00"/>
-            <endDate date="2023-04-14" time="09:15:00"/>
+            <endDate date="2018-04-12" time="09:50:00"/>
             <missVal>NaN</missVal>
             <stationName>KGM_067107_Ameide, Broekseweg_Hben</stationName>
             <units>mNAP</units>
@@ -42,7 +42,6 @@
         <event date="2018-04-12" time="09:40:00" value="-1.607" flag="2"/>
         <event date="2018-04-12" time="09:45:00" value="-1.607" flag="1"/>
         <event date="2018-04-12" time="09:50:00" value="NaN" flag="2"/>
-        <event date="2018-04-12" time="09:55:00" value="-1.605" flag="3"/>
     </series>
     <series>
         <header>
@@ -51,12 +50,12 @@
             <parameterId>SD.5</parameterId>
             <timeStep unit="second" multiplier="300"/>
             <startDate date="2018-04-12" time="09:15:00"/>
-            <endDate date="2023-04-14" time="09:15:00"/>
+            <endDate date="2018-04-12" time="09:50:00"/>
             <missVal>NaN</missVal>
             <stationName>Ameide, Broekseweg_VL2</stationName>
             <units>mNAP</units>
         </header>
-        <event date="2018-04-12" time="09:15:00" value="-1.4" flag="2"/>
+        <event date="2018-04-12" time="09:15:00" value="-1.4" flag="4"/>
         <event date="2018-04-12" time="09:20:00" value="-1.401" flag="2"/>
         <event date="2018-04-12" time="09:25:00" value="-1.401" flag="2"/>
         <event date="2018-04-12" time="09:30:00" value="-1.4" flag="2"/>
@@ -64,7 +63,6 @@
         <event date="2018-04-12" time="09:40:00" value="-1.401" flag="2"/>
         <event date="2018-04-12" time="09:45:00" value="-1.401" flag="2"/>
         <event date="2018-04-12" time="09:50:00" value="-1.401" flag="2"/>
-        <event date="2018-04-12" time="09:55:00" value="NaN" flag="2"/>
     </series>
     <series>
         <header>
@@ -86,7 +84,7 @@
             <parameterId>H.M.5</parameterId>
             <timeStep unit="second" multiplier="300"/>
             <startDate date="2018-04-12" time="09:15:00"/>
-            <endDate date="2023-04-14" time="09:15:00"/>
+            <endDate date="2018-04-12" time="09:50:00"/>
             <missVal>NaN</missVal>
             <stationName>KGM_067107_Ameide, Broekseweg_Hbov</stationName>
             <units>mNAP</units>
