@@ -2,7 +2,7 @@ import unittest
 import tempfile
 from pathlib import Path
 
-from scripts.pixml2csv import convert_xml2csv
+from FEWS_tools.scripts.pixml2csv import convert_pixml2csv
 from tests import (
     DEBUG, DATAPATH, OUTPUTPATH,
     PIXML_TIMESERIES_SL, PIXML_TIMESERIES_HL, PIXML_TIMESERIES_HL_SL)
@@ -19,25 +19,25 @@ class TestConvertXml2Csv(unittest.TestCase):
             self.tmp_output_folder.rmdir()
 
     def test_equidistant_sublocation_separate_files(self):
-        convert_xml2csv(DATAPATH, PIXML_TIMESERIES_SL, self.tmp_output_folder, join_events=False)
+        convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_SL, self.tmp_output_folder, join_events=False)
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
         self.assertEqual(len(written_files), 4)
 
     def test_nonequidistant_sublocations(self):
-        convert_xml2csv(DATAPATH, PIXML_TIMESERIES_HL, self.tmp_output_folder)
+        convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_HL, self.tmp_output_folder)
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
         self.assertEqual(len(written_files), 8)
 
     def test_equidistant_sublocations_separate_files(self):
-        convert_xml2csv(DATAPATH, PIXML_TIMESERIES_HL_SL, self.tmp_output_folder, join_events=False)
+        convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_HL_SL, self.tmp_output_folder, join_events=False)
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
         self.assertEqual(len(written_files), 11)
 
     def test_equidistant_sublocations(self):
-        convert_xml2csv(DATAPATH, PIXML_TIMESERIES_HL_SL, self.tmp_output_folder)
+        convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_HL_SL, self.tmp_output_folder)
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
         self.assertEqual(len(written_files), 10)

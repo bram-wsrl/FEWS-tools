@@ -3,8 +3,8 @@ import datetime as dt
 import itertools as it
 import xml.etree.ElementTree as ET
 
-from lib.utils import ns
-from lib.models import TimeSerie
+from FEWS_tools.lib.utils import ns
+from FEWS_tools.lib.models import TimeSerie
 from tests import (
     DATAPATH, PIXML_TIMESERIES_SL, PIXML_TIMESERIES_HL, PIXML_TIMESERIES_HL_SL)
 

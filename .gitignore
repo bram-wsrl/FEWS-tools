@@ -3,4 +3,7 @@
 .vscode/
 __pycache__/
 
+*.log
+*.bat
+
 tests/data/output/*

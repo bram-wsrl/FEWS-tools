@@ -13,8 +13,8 @@ import csv
 import itertools as it
 import xml.etree.ElementTree as ET
 
-from lib.utils import ns
-from lib.models import TimeSerie
+from FEWS_tools.lib.utils import ns
+from FEWS_tools.lib.models import TimeSerie
 
 
 def events_to_csv(events, filepath):
@@ -25,7 +25,7 @@ def events_to_csv(events, filepath):
         writer.writerows(events)
 
 
-def convert_xml2csv(basename, filename, output_folder=None, join_events=True):
+def convert_pixml2csv(basename, filename, output_folder=None, join_events=True):
     '''
     Convert pixml to csv - this function can be called from within FEWS.
 
@@ -97,23 +97,3 @@ def convert_xml2csv(basename, filename, output_folder=None, join_events=True):
                 root.append(v.series)
 
     tree.write(output_folder / f'meta{filename}')
-
-
-if __name__ == '__main__':
-    import sys
-    import argparse
-    from pathlib import Path
-
-    sys.stdout.write('INFO - Hello, World!')
-
-    parser = argparse.ArgumentParser()
-
-    parser.add_argument('-b', '--basename', required=True, type=Path)
-    parser.add_argument('-f', '--filename', required=True, type=str)
-    parser.add_argument('-o', '--output', type=Path)
-    parser.add_argument('-j', '--join-events', action='store_false')
-    parser.add_argument('-v', '--verbose', action='store_true')
-
-    args = parser.parse_args()
-
-    convert_xml2csv(args.basename, args.filename, args.output, args.join_events)

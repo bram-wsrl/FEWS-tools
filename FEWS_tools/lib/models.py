@@ -2,8 +2,8 @@ import datetime as dt
 from collections import ChainMap
 from xml.etree.ElementTree import Element
 
-from lib.utils import ns
-from lib.dtypes import GroupSet
+from FEWS_tools.lib.utils import ns
+from FEWS_tools.lib.dtypes import GroupSet
 
 
 class TimeSerie(GroupSet):

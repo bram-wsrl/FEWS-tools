@@ -1,6 +1,6 @@
 import unittest
 
-from lib.dtypes import GroupSet
+from FEWS_tools.lib.dtypes import GroupSet
 
 
 class TestGroupSet(unittest.TestCase):
