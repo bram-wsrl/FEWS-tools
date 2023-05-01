@@ -3,5 +3,4 @@
 .vscode/
 __pycache__/
 
-tests/data/output/*.csv
-tests/data/output/*.xml
+tests/data/output/*

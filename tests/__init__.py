@@ -1,5 +1,6 @@
 from pathlib import Path
 
+DEBUG = False
 
 BASEPATH = Path(__file__).resolve().parent.parent
 TESTPATH = BASEPATH / 'tests'

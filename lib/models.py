@@ -27,16 +27,17 @@ class TimeSerie(GroupSet):
             self.events.append(event.attrib)
             self.series.remove(event)
 
-        # group by (VL | P | H)
-        group_key = f'{self.location}_{self.sublocation}'
-        if self.sublocation.startswith('H'):
-            group_key = f'{self.location}_H'
-
         # instantiate GroupSet
-        super().__init__(group_key, self.locationId, self.parameterId)
+        super().__init__(self.get_group_key(), self.locationId, self.parameterId)
 
     def __repr__(self) -> str:
         return f'<TimeSerie({self.location}, {self.locationId}, {self.parameterId})>'
+
+    def get_group_key(self) -> str:
+        '''group by VL*, P* or H'''
+        if self.sublocation.startswith('H'):
+            return f'{self.location}_H'
+        return f'{self.location}_{self.sublocation}'
 
     @property
     def has_events(self) -> bool:
@@ -102,7 +103,7 @@ class TimeSerie(GroupSet):
 
     def update_events(self) -> None:
         '''update event keys with series specific names'''
-        column_suffix = f'{self.parameterId}_{self.locationId}'
+        column_suffix = f'{self.sublocation}_{self.parameterId}'
         for event in self.events:
             event[f'value_{column_suffix}'] = event.pop('value')
             event[f'flag_{column_suffix}'] = event.pop('flag')
