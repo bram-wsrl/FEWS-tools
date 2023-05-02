@@ -25,12 +25,12 @@ def events_to_csv(events, filepath):
         writer.writerows(events)
 
 
-def convert_pixml2csv(basename, filename, output_folder=None, join_events=True):
+def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=True):
     '''
     Convert pixml to csv - this function can be called from within FEWS.
 
-    The basename is the directory where the exported filename is located.
-    The filename is an exported PIXML-file by FEWS.
+    The basename is the directory where the exported xmlfilename is located.
+    The xmlfilename is an exported PIXML-file by FEWS.
     The basename is used when the output_folder is not specified.
     The join_events argument specifies whether equidistant series
     should written to the same file.
@@ -41,7 +41,7 @@ def convert_pixml2csv(basename, filename, output_folder=None, join_events=True):
     output_folder = output_folder or basename
 
     namespace = "http://www.wldelft.nl/fews/PI"
-    tree = ET.parse(basename / filename)
+    tree = ET.parse(basename / xmlfilename)
     root = tree.getroot()
 
     gr_tdelta = lambda x: x.timedelta
@@ -74,9 +74,8 @@ def convert_pixml2csv(basename, filename, output_folder=None, join_events=True):
                 joined_events = TimeSerie.join_events(v)
 
                 # write to disk
-                filename = f'{v[0].get_group_key()}_T{timedelta.seconds / 60}.csv'
-                filepath = output_folder / filename
-                events_to_csv(joined_events, filepath)
+                csvfile = f'{v[0].get_group_key()}_T{timedelta.seconds / 60}.csv'
+                events_to_csv(joined_events, output_folder / csvfile)
 
                 # update metafile
                 for i in v:
@@ -90,10 +89,10 @@ def convert_pixml2csv(basename, filename, output_folder=None, join_events=True):
                 # v.update_events()
 
                 # write to disk
-                filepath = output_folder / f'{v.stationName}_{v.parameterId}.csv'
-                events_to_csv(v.events, filepath)
+                csvfile = f'{v.stationName}_{v.parameterId}.csv'
+                events_to_csv(v.events, output_folder / csvfile)
 
                 # update metafile
                 root.append(v.series)
 
-    tree.write(output_folder / f'meta{filename}')
+    tree.write(output_folder / f'meta{xmlfilename}')
