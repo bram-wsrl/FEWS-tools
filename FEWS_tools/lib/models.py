@@ -15,17 +15,15 @@ class TimeSerie(GroupSet):
     the unique sort keys are a combination of
     the locationId and parameterId.
     '''
-    def __init__(self, series: Element, namespace: str) -> None:
-        self.series = series
+    def __init__(self, series: iter, namespace: str) -> None:
         self.namespace = namespace
 
-        self.header = series.find(ns('header', namespace))
+        # load header
+        self.header = list(series.iter(ns('header', namespace)))[0]
 
-        # events to list of dicts
-        self.events = []
-        for event in series.findall(ns('event', namespace)):
-            self.events.append(event.attrib)
-            self.series.remove(event)
+        # load events
+        self.events = [event.attrib for event in
+                       series.iter(ns('event', namespace))]
 
         # instantiate GroupSet
         super().__init__(self.get_group_key(), self.locationId, self.parameterId)

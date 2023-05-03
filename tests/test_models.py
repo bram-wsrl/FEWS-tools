@@ -197,10 +197,8 @@ class TestTimeSeriesTimeGroupby(unittest.TestCase):
         self.assertEqual(loc_groups, {})
 
 '''
-Add comments and docstrings
 Add tests ValueError raises in join_events
 Write H group to VL in main function
-Add tests for main function using tempdir/file removals
 '''
 
 

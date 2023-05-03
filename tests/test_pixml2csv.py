@@ -22,22 +22,22 @@ class TestConvertXml2Csv(unittest.TestCase):
         convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_SL, self.tmp_output_folder, join_events=False)
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
-        self.assertEqual(len(written_files), 4)
+        self.assertEqual(len(written_files), 3)
 
     def test_nonequidistant_sublocations(self):
         convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_HL, self.tmp_output_folder)
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
-        self.assertEqual(len(written_files), 8)
+        self.assertEqual(len(written_files), 7)
 
     def test_equidistant_sublocations_separate_files(self):
         convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_HL_SL, self.tmp_output_folder, join_events=False)
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
-        self.assertEqual(len(written_files), 11)
+        self.assertEqual(len(written_files), 10)
 
     def test_equidistant_sublocations(self):
         convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_HL_SL, self.tmp_output_folder)
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
-        self.assertEqual(len(written_files), 10)
+        self.assertEqual(len(written_files), 9)

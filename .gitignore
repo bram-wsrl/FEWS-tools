@@ -7,3 +7,4 @@ __pycache__/
 *.bat
 
 tests/data/output/*
+tests/data/pixml_timeseries_large.xml

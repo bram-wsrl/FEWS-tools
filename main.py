@@ -11,6 +11,9 @@ if __name__ == '__main__':
 
     # init parsers - extend with subparser for new function
     parser = argparse.ArgumentParser('FEWS Tools', description='Global options')
+
+    loglevels = ['DEBUG', 'INFO', 'WARNING']
+    parser.add_argument('-v', '--loglevel', choices=loglevels, default=loglevels[1])
     parser.add_argument('-l', '--logfile', type=Path)
 
     # subparsers
@@ -21,15 +24,15 @@ if __name__ == '__main__':
     pixml2csv_parser.add_argument('-f', '--filename', required=True, type=str)
     pixml2csv_parser.add_argument('-o', '--output_folder', type=Path)
     pixml2csv_parser.add_argument('-s', '--separate_events', action='store_false')
-
     args = parser.parse_args()
 
-    if args.logfile is not None:
-        logger.setLevel(logging.DEBUG)
+    logger.setLevel(args.loglevel)
 
+    if args.logfile is not None:
         fmt = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         add_loghandler(logger, logging.FileHandler, logging.DEBUG, fmt,
                        filename=args.logfile, mode='w')
+
         logger.debug('Logger Initialized')
 
     if args.command == 'pixml2csv':

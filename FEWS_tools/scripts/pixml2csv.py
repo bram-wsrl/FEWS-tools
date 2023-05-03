@@ -13,6 +13,7 @@ import csv
 import itertools as it
 import xml.etree.ElementTree as ET
 
+from FEWS_tools import logger
 from FEWS_tools.lib.utils import ns
 from FEWS_tools.lib.models import TimeSerie
 
@@ -44,13 +45,15 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
     tree = ET.parse(basename / xmlfilename)
     root = tree.getroot()
 
+    # instantiate TimeSerie Objects
+    timeseries = []
+    for serie in root.iter(ns('series', namespace)):
+        timeseries.append(TimeSerie(serie, namespace))
+        logger.debug('Successfully parsed TimeSerie')
+
+    # group functions
     gr_tdelta = lambda x: x.timedelta
     gr_subloc = TimeSerie.grouper
-
-    timeseries = []
-    for serie in root.findall(ns('series', namespace)):
-        timeseries.append(TimeSerie(serie, namespace))
-        root.remove(serie)
 
     # group by timedelta
     timeseries = sorted(timeseries, key=gr_tdelta)
@@ -77,22 +80,10 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
                 csvfile = f'{v[0].get_group_key()}_T{timedelta.seconds / 60}.csv'
                 events_to_csv(joined_events, output_folder / csvfile)
 
-                # update metafile
-                for i in v:
-                    root.append(i.series)
-
         # nonequidistant - write to single files
         else:
             for v in it.chain(*list(timedelta_subloc_groups.values())):
 
-                # keep value, flag names?
-                # v.update_events()
-
                 # write to disk
                 csvfile = f'{v.stationName}_{v.parameterId}.csv'
                 events_to_csv(v.events, output_folder / csvfile)
-
-                # update metafile
-                root.append(v.series)
-
-    tree.write(output_folder / f'meta{xmlfilename}')
