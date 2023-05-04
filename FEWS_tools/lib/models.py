@@ -18,18 +18,33 @@ class TimeSerie(GroupSet):
     def __init__(self, series: iter, namespace: str) -> None:
         self.namespace = namespace
 
-        # load header
-        self.header = list(series.iter(ns('header', namespace)))[0]
-
-        # load events
-        self.events = [event.attrib for event in
-                       series.iter(ns('event', namespace))]
+        # parse series
+        self.header = self.parse_header(series)
+        self.events = self.parse_events(series)
 
         # instantiate GroupSet
         super().__init__(self.get_group_key(), self.locationId, self.parameterId)
 
     def __repr__(self) -> str:
         return f'<TimeSerie({self.location}, {self.locationId}, {self.parameterId})>'
+    
+    def parse_header(self, series: iter) -> Element:
+        return list(series.iter(ns('header', self.namespace)))[0]
+
+    def parse_events(self, series: iter) -> list[dict]:
+        '''parse events - return empty list when all no data values'''
+        nodata = True
+        events = []
+        for event_element in series.iter(ns('event', self.namespace)):
+            event_attrib = event_element.attrib
+            events.append(event_attrib)
+
+            if event_attrib['value'] != self.missVal:
+                nodata = False
+
+        if nodata:
+            return []
+        return events
 
     def get_group_key(self) -> str:
         '''group by VL*, P* or H'''
@@ -60,6 +75,10 @@ class TimeSerie(GroupSet):
     @property
     def parameterId(self) -> str:
         return self.header.find(ns('parameterId', self.namespace)).text
+
+    @property
+    def missVal(self) -> str:
+        return self.header.find(ns('missVal', self.namespace)).text
 
     @property
     def start_datetime(self) -> dt.datetime:

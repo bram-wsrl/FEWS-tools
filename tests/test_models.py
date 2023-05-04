@@ -23,6 +23,7 @@ class TestTimeSerieInstances(unittest.TestCase):
         self.serie3 = series[2]
         self.serie4_no_events = series[3]
         self.serie1_duplicate = series[4]
+        self.serie5_nodata_events = series[5]
 
     def tearDown(self):
         self.root.clear()
@@ -36,6 +37,7 @@ class TestTimeSerieInstances(unittest.TestCase):
         self.assertEqual(timeserie1.sublocation, 'Hbov')
         self.assertEqual(timeserie1.locationId, 'OW000631')
         self.assertEqual(timeserie1.parameterId, 'H.M.5')
+        self.assertEqual(timeserie1.missVal, 'NaN')
         self.assertEqual(timeserie1.group_key, 'Ameide, Broekseweg_H')
         self.assertEqual(timeserie1.start_datetime, dt.datetime(2018, 4, 12, 9, 15))
         self.assertEqual(timeserie1.end_datetime, dt.datetime(2018, 4, 12, 9, 50))
@@ -46,6 +48,10 @@ class TestTimeSerieInstances(unittest.TestCase):
         timeserie1 = TimeSerie(self.serie1, self.namespace)
         timeserie1_duplicate = TimeSerie(self.serie1_duplicate, self.namespace)
         self.assertEqual(timeserie1, timeserie1_duplicate)
+    
+    def test_timeserie_nodata_events(self):
+        timeserie5 = TimeSerie(self.serie5_nodata_events, self.namespace)
+        self.assertEqual(timeserie5.events, [])
 
     def test_timeserie_no_events(self):
         timeserie4_no_events = TimeSerie(self.serie4_no_events, self.namespace)

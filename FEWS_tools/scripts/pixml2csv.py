@@ -59,15 +59,18 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
     timeseries = sorted(timeseries, key=gr_tdelta)
     timedelta_groups = {
         k: list(v) for k, v in it.groupby(timeseries, key=gr_tdelta)}
+    logger.debug(f'Grouped by {len(timedelta_groups)} timedeltas')
 
     for timedelta, timedelta_group in timedelta_groups.items():
         # remove duplicate and empty TimeSerie objects
         timeserie_subloc = [i for i in set(timedelta_group) if i.has_events]
         timeserie_subloc = sorted(timeserie_subloc, key=gr_subloc)
+        logger.debug(f'Removed empty/duplicates and sorted remaining TimeSerie objects')
 
         # grouped by timedelta and sublocation
         timedelta_subloc_groups = {
             k: list(v) for k, v in it.groupby(timeserie_subloc, key=gr_subloc)}
+        logger.debug(f'timestep {timedelta} contains {len(timedelta_subloc_groups)} subgroup(s)')
 
         # equidistant - possibility to write corrosponding series to same file
         if timedelta and join_events:
@@ -75,10 +78,12 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
 
                 # join events on timeindex and update column names
                 joined_events = TimeSerie.join_events(v)
+                logger.debug(f'Joined events of {len(v)} TimeSerie objects')
 
                 # write to disk
-                csvfile = f'{v[0].get_group_key()}_T{timedelta.seconds / 60}.csv'
+                csvfile = f'{v[0].get_group_key()}_T{timedelta.seconds / 60:.0f}.csv'
                 events_to_csv(joined_events, output_folder / csvfile)
+                logger.info(f'Saved {csvfile}')
 
         # nonequidistant - write to single files
         else:
@@ -87,3 +92,4 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
                 # write to disk
                 csvfile = f'{v.stationName}_{v.parameterId}.csv'
                 events_to_csv(v.events, output_folder / csvfile)
+                logger.info(f'Saved {csvfile}')
