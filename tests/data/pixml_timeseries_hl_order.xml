@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.2">
+    <timeZone>0.0</timeZone>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>OW000632</locationId>
+            <parameterId>H.M.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>KGM_067107_Ameide, Broekseweg_Hben</stationName>
+            <units>mNAP</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>OW000631</locationId>
+            <parameterId>H.M.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>KGM_067107_Ameide, Broekseweg_Hbov</stationName>
+            <units>mNAP</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>BS.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>-</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>SH.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>%</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>TT.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>-</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>PF.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>Hz</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>A.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>-</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>SD.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>mNAP</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>MWAR.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>%</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>Q.B.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>m3/s</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>Q.B.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-05" time="10:00:00"/>
+            <endDate date="2023-05-05" time="10:30:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>m3/s</units>
+        </header>
+        <event date="2023-05-05" time="10:00:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:05:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:10:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:15:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:20:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:25:00" value="0" flag="0"/>
+        <event date="2023-05-05" time="10:30:00" value="0" flag="0"/>
+    </series>
+</TimeSeries>

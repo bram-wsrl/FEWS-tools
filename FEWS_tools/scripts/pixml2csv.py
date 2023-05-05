@@ -51,6 +51,9 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
         timeseries.append(TimeSerie(serie, namespace))
         logger.debug('Successfully parsed TimeSerie')
 
+    # record original timeserie input order
+    input_order = [f'{i.locationId}{i.parameterId}' for i in timeseries]
+
     # group functions
     gr_tdelta = lambda x: x.timedelta
     gr_subloc = TimeSerie.grouper
@@ -72,9 +75,12 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
             k: list(v) for k, v in it.groupby(timeserie_subloc, key=gr_subloc)}
         logger.debug(f'timestep {timedelta} contains {len(timedelta_subloc_groups)} subgroup(s)')
 
-        # equidistant - possibility to write corrosponding series to same file
+        # equidistant - possibility to write corresponding series to same file
         if timedelta and join_events:
             for v in timedelta_subloc_groups.values():
+
+                # restore original sort order
+                v = sorted(v, key=lambda x: input_order.index(f'{x.locationId}{x.parameterId}'))
 
                 # join events on timeindex and update column names
                 joined_events = TimeSerie.join_events(v)
