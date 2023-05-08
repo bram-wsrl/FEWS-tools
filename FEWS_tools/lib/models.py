@@ -53,6 +53,10 @@ class TimeSerie(GroupSet):
         return f'{self.location}_{self.sublocation}'
 
     @property
+    def group_type(self) -> str:
+        return self.sublocation[0].upper()
+
+    @property
     def has_events(self) -> bool:
         return len(self.events) != 0
 

@@ -41,6 +41,12 @@ class TestConvertXml2Csv(unittest.TestCase):
         written_files = sorted(Path(self.tmp_output_folder).iterdir())
 
         self.assertEqual(len(written_files), 9)
+    
+    def test_equidistant_timeseries_H_to_SL(self):
+        convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_HL_ORDER, self.tmp_output_folder, H_to_SL=True)
+        written_files = sorted(Path(self.tmp_output_folder).iterdir())
+
+        self.assertEqual(len(written_files), 2)
 
     def test_equidistant_timeseries_inputorder_is_outputorder(self):
         convert_pixml2csv(DATAPATH, PIXML_TIMESERIES_HL_ORDER, self.tmp_output_folder)

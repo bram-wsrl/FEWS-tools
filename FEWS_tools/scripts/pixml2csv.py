@@ -10,6 +10,7 @@ Read PI-XML and convert to CSV
 
 
 import csv
+import copy as cp
 import itertools as it
 import xml.etree.ElementTree as ET
 
@@ -26,7 +27,8 @@ def events_to_csv(events, filepath):
         writer.writerows(events)
 
 
-def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=True):
+def convert_pixml2csv(
+        basename, xmlfilename, output_folder=None, join_events=True, H_to_SL=False):
     '''
     Convert pixml to csv - this function can be called from within FEWS.
 
@@ -77,7 +79,23 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
 
         # equidistant - possibility to write corresponding series to same file
         if timedelta and join_events:
-            for v in timedelta_subloc_groups.values():
+
+            # get H_timeseries
+            H_timeseries = []
+            if H_to_SL:
+                H_key = None
+                for k, v in timedelta_subloc_groups.items():
+                    if v[0].group_type == 'H':
+                        H_key = k
+                H_timeseries = timedelta_subloc_groups.pop(H_key, [])
+
+            for k, v in timedelta_subloc_groups.items():
+                # get original group_key as waterlevels might be added
+                group_key = v[0].get_group_key()
+
+                # possibly add waterlevels to same csv
+                # make copies to keep the process symmetric
+                v.extend([cp.deepcopy(i) for i in H_timeseries])
 
                 # restore original sort order
                 v = sorted(v, key=lambda x: input_order.index(f'{x.locationId}{x.parameterId}'))
@@ -87,7 +105,7 @@ def convert_pixml2csv(basename, xmlfilename, output_folder=None, join_events=Tru
                 logger.debug(f'Joined events of {len(v)} TimeSerie objects')
 
                 # write to disk
-                csvfile = f'{v[0].get_group_key()}_T{timedelta.seconds / 60:.0f}.csv'
+                csvfile = f'{group_key}_T{timedelta.seconds / 60:.0f}.csv'
                 events_to_csv(joined_events, output_folder / csvfile)
                 logger.info(f'Saved {csvfile}')
 

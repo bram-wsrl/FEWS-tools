@@ -24,6 +24,7 @@ if __name__ == '__main__':
     pixml2csv_parser.add_argument('-f', '--filename', required=True, type=str)
     pixml2csv_parser.add_argument('-o', '--output_folder', type=Path)
     pixml2csv_parser.add_argument('-s', '--separate_events', action='store_false')
+    pixml2csv_parser.add_argument('-j', '--join_h_to_sl', action='store_true')
     args = parser.parse_args()
 
     logger.setLevel(args.loglevel)
@@ -37,6 +38,6 @@ if __name__ == '__main__':
 
     if args.command == 'pixml2csv':
         convert_pixml2csv(
-            args.basename, args.filename, args.output_folder, args.separate_events)
+            args.basename, args.filename, args.output_folder, args.separate_events, args.join_h_to_sl)
 
         logger.info('Conversion completed!')
