@@ -1,15 +1,9 @@
 """
 Read PI-XML and convert to CSV
-
-1. read xml-file
-2. loop over all <series>-tags
-3. use <header> and <event>-tags in dedicated object TimeSeries
-4. write TimeSeries to disk if <event>-tags available
-5. write back original xml without the events which are written to a separate csv
 """
 
-
 import csv
+import fnmatch
 import copy as cp
 import itertools as it
 import xml.etree.ElementTree as ET
@@ -28,30 +22,34 @@ def events_to_csv(events, filepath):
 
 
 def convert_pixml2csv(
-        basename, xmlfilename, output_folder=None, join_events=True, H_to_SL=False):
+        basename, xmlfilepattern, output_folder=None, join_events=True, H_to_SL=False):
     '''
     Convert pixml to csv - this function can be called from within FEWS.
 
-    The basename is the directory where the exported xmlfilename is located.
-    The xmlfilename is an exported PIXML-file by FEWS.
+    The basename is the directory where the exported xmlfile(s) are located.
+    The xmlfilepattern matches the exported PIXML-file(s) by FEWS.
     The basename is used when the output_folder is not specified.
     The join_events argument specifies whether equidistant series
     should written to the same file.
 
-    The original PIXML-file is copied to the output without
-    the event tags and is stripped from duplicates and empty series.
+    The resulting csvfiles are stripped from duplicates and empty series.
     '''
     output_folder = output_folder or basename
-
     namespace = "http://www.wldelft.nl/fews/PI"
-    tree = ET.parse(basename / xmlfilename)
-    root = tree.getroot()
 
-    # instantiate TimeSerie Objects
     timeseries = []
-    for serie in root.iter(ns('series', namespace)):
-        timeseries.append(TimeSerie(serie, namespace))
-        logger.debug('Successfully parsed TimeSerie')
+    for xmlfilepath in basename.iterdir():
+        if fnmatch.fnmatch(xmlfilepath.name, xmlfilepattern):
+            # parse xmlfile
+            tree = ET.parse(xmlfilepath)
+            root = tree.getroot()
+
+            # parse and convert serie tag to TimeSerie
+            for serie in root.iter(ns('series', namespace)):
+                timeseries.append(TimeSerie(serie, namespace))
+                logger.debug(f'Successfully parsed {xmlfilepath.name}')
+
+            root.clear()
 
     # record original timeserie input order
     input_order = [f'{i.locationId}{i.parameterId}' for i in timeseries]

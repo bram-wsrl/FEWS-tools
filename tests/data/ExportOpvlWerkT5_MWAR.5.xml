@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TimeSeries xmlns="http://www.wldelft.nl/fews/PI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.wldelft.nl/fews/PI http://fews.wldelft.nl/schemas/version1.0/pi-schemas/pi_timeseries.xsd" version="1.2">
+    <timeZone>0.0</timeZone>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000323</locationId>
+            <parameterId>MWAR.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-12" time="07:00:00"/>
+            <endDate date="2023-05-12" time="08:00:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_P1</stationName>
+            <units>%</units>
+        </header>
+        <event date="2023-05-12" time="07:00:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:05:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:10:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:15:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:20:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:25:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:30:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:35:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:40:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:45:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:50:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:55:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="08:00:00" value="NaN" flag="8"/>
+    </series>
+    <series>
+        <header>
+            <type>instantaneous</type>
+            <locationId>SL000324</locationId>
+            <parameterId>MWAR.5</parameterId>
+            <timeStep unit="second" multiplier="300"/>
+            <startDate date="2023-05-12" time="07:00:00"/>
+            <endDate date="2023-05-12" time="08:00:00"/>
+            <missVal>NaN</missVal>
+            <stationName>Ameide, Broekseweg_VL2</stationName>
+            <units>%</units>
+        </header>
+        <event date="2023-05-12" time="07:00:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:05:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:10:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:15:00" value="0" flag="2"/>
+        <event date="2023-05-12" time="07:20:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:25:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:30:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:35:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:40:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:45:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:50:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="07:55:00" value="NaN" flag="8"/>
+        <event date="2023-05-12" time="08:00:00" value="NaN" flag="8"/>
+    </series>
+</TimeSeries>

@@ -72,3 +72,28 @@ class TestConvertXml2Csv(unittest.TestCase):
             with open(self.tmp_output_folder / file, 'r') as fr:
                 # match column names in file with input xml order
                 self.assertEqual(tuple(fr.readline().strip().split(',')[2:]), columns)
+
+    def test_equidistant_timeseries_xmlfilepattern(self):
+        xmlfilepattern = 'ExportOpvlWerkT*.xml'
+        convert_pixml2csv(DATAPATH, xmlfilepattern, self.tmp_output_folder)
+        written_files = sorted(Path(self.tmp_output_folder).iterdir())
+
+        self.assertEqual(len(written_files), 3)
+
+    def test_equidistant_timeseries_xmlfilepattern_separate_events(self):
+        xmlfilepattern = 'ExportOpvlWerkT*.xml'
+        convert_pixml2csv(DATAPATH, xmlfilepattern, self.tmp_output_folder, join_events=False)
+        written_files = sorted(Path(self.tmp_output_folder).iterdir())
+
+        self.assertEqual(len(written_files), 11)
+
+    def test_equidistant_timeseries_xmlfilepattern_H_to_SL(self):
+        xmlfilepattern = 'ExportOpvlWerkT*.xml'
+        convert_pixml2csv(DATAPATH, xmlfilepattern, self.tmp_output_folder, H_to_SL=True)
+        written_files = sorted(Path(self.tmp_output_folder).iterdir())
+
+        self.assertEqual(len(written_files), 2)
+
+
+if __name__ == '__main__':
+    unittest.main()

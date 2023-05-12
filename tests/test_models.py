@@ -204,9 +204,7 @@ class TestTimeSeriesTimeGroupby(unittest.TestCase):
 
 '''
 Add tests ValueError raises in join_events
-Write H group to VL in main function
 '''
-
 
 if __name__ == '__main__':
     unittest.main()
