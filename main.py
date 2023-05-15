@@ -32,7 +32,7 @@ if __name__ == '__main__':
     if args.logfile is not None:
         fmt = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
         add_loghandler(logger, logging.FileHandler, logging.DEBUG, fmt,
-                       filename=args.logfile, mode='w')
+                       filename=args.logfile, mode='a')
 
         logger.debug('Logger Initialized')
 
