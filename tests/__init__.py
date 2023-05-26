@@ -5,6 +5,7 @@ DEBUG = False
 BASEPATH = Path(__file__).resolve().parent.parent
 TESTPATH = BASEPATH / 'tests'
 DATAPATH = TESTPATH / 'data'
+CONVDATA = DATAPATH / 'convert'
 FLAGDATA = DATAPATH / 'flagging'
 OUTPUTPATH = DATAPATH / 'output'
 

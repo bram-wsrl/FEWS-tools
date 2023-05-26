@@ -6,12 +6,12 @@ import xml.etree.ElementTree as ET
 from FEWS_tools.lib.utils import ns
 from FEWS_tools.lib.models import TimeSerie
 from tests import (
-    DATAPATH, PIXML_TIMESERIES_SL, PIXML_TIMESERIES_HL, PIXML_TIMESERIES_HL_SL)
+    CONVDATA, PIXML_TIMESERIES_SL, PIXML_TIMESERIES_HL, PIXML_TIMESERIES_HL_SL)
 
 
 class TestTimeSerieInstances(unittest.TestCase):
     namespace = "http://www.wldelft.nl/fews/PI"
-    pixml_timeseries_sl = DATAPATH / PIXML_TIMESERIES_SL
+    pixml_timeseries_sl = CONVDATA / PIXML_TIMESERIES_SL
 
     def setUp(self):
         self.tree = ET.parse(self.pixml_timeseries_sl)
@@ -100,7 +100,7 @@ class TestTimeSerieInstances(unittest.TestCase):
 
 class TestTimeSeriesSequences(unittest.TestCase):
         namespace = "http://www.wldelft.nl/fews/PI"
-        pixml_timeseries_hl = DATAPATH / PIXML_TIMESERIES_HL
+        pixml_timeseries_hl = CONVDATA / PIXML_TIMESERIES_HL
 
         def setUp(self):
             self.tree = ET.parse(self.pixml_timeseries_hl)
@@ -157,7 +157,7 @@ class TestTimeSeriesSequences(unittest.TestCase):
 
 class TestTimeSeriesTimeGroupby(unittest.TestCase):
     namespace = "http://www.wldelft.nl/fews/PI"
-    pixml_timeseries_hl_sl = DATAPATH / PIXML_TIMESERIES_HL_SL
+    pixml_timeseries_hl_sl = CONVDATA / PIXML_TIMESERIES_HL_SL
 
     def setUp(self):
         self.tree = ET.parse(self.pixml_timeseries_hl_sl)
