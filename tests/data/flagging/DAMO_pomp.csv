@@ -1,0 +1,26 @@
+Versie1_ALB;GlobalpompID;OBJECTID;CODE;NAAM;TYPEPOMP;TYPEFORMULE;POMPCAP;MAX_AMPERE;MAX_TOER;MIN_TOER;OBJECTBEGI;OBJECTEIND;GECONTROLEERD
+1;;KGM_000873;SL000247;Oud-Alblas Zuidzijde_P;Pompvijzel;Bedrijfsstatus;150;137;25;0;01-01-1900;22-02-2013;2
+1;;KGM_000873;SL000247;Oud-Alblas Zuidzijde_P;Pompvijzel;Ampere;150;137;25;0;22-02-2013;31-12-2099;2
+1;;KGM_000866;SL000253;Bleskensgraaf Noordzijde_P1;Pompvijzel;Bedrijfsstatus;40;37.5;39;0;01-01-1900;04-09-2013;2
+Centrifugaalpomp;;KGM_000866;SL000253;Bleskensgraaf Noordzijde_P1;Pompvijzel;Ampere;27.5;108;740;300;04-09-2013;16-10-2020;2
+Centrifugaalpomp;;KGM_000866;SL000253;Bleskensgraaf Noordzijde_P1;Pompvijzel;Toerental;50;108;740;300;16-10-2020;31-12-2099;2
+1;;KGM_000863;SL000259;Molenaarsgraaf_P;Pompvijzel;Bedrijfsstatus;220;;40;23;01-01-1900;10-06-2016;2
+1;;KGM_000863;SL000259;Molenaarsgraaf_P;Pompvijzel;Toerental;220;;40;23;10-06-2016;31-12-2099;2
+1;;KGM_000826;SL000271;Middelbroek_P;Pompvijzel;Bedrijfsstatus;170;134;26;;01-01-1900;24-10-2012;2
+1;;KGM_000826;SL000271;Middelbroek_P;Pompvijzel;Ampere;170;134;26;;24-10-2012;31-12-2099;2
+1;;KGM_000839;SL000276;Land van de Zes Molens_P3;Pompvijzel;Bedrijfsstatus;160;137;42.0;25.0;01-01-1900;04-03-2017;2
+1;;KGM_000839;SL000276;Land van de Zes Molens_P3;Pompvijzel;Snelheid;160;137;42.0;25.0;04-03-2017;29-01-2023;2
+1;;KGM_000839;SL000276;Land van de Zes Molens_P3;Pompvijzel;Toerental;160;137;42.0;25.0;29-01-2023;31-12-2099;2
+1;;KGM_000844;SL000277;Banne van Gorinchem. de_P;Pompvijzel;Bedrijfsstatus;65;37.5;34;;01-01-1900;31-12-2099;2
+1;;KGM_000825;SL000283;Langerak_P;Pompvijzel;Bedrijfsstatus;110;84;27;;01-01-1900;31-12-2099;2
+1;;KGM_000869;SL000285;Ottoland_P;Pompvijzel;Bedrijfsstatus;50;43.5;37;;01-01-1900;29-01-2023;2
+1;;KGM_000869;SL000285;Ottoland_P;Pompvijzel;Snelheid;50;43.5;37;;29-01-2023;31-12-2099;2
+1;;KGM_000859;SL000290;Streefkerk_P;Pompvijzel;Bedrijfsstatus;150;144;25.5;;01-01-1900;28-01-2013;2
+1;;KGM_000859;SL000290;Streefkerk_P;Pompvijzel;Ampere;150;144;25.5;;28-01-2013;31-12-2099;2
+1;;KGM_000846;SL000329;Hardinxveld Zuid_P1-uit;Pompvijzel;Bedrijfsstatus;30;55;980;;01-01-1900;31-12-2099;2
+1;;KGM_000867;SL000336;Sliedrecht_P;Pompvijzel;Bedrijfsstatus;170;;;;01-01-1900;31-12-2099;2
+1;;KGM_000845;SL000650;Hardinxveld Noord_P;Pompvijzel;Bedrijfsstatus;40;;;;01-01-1900;14-12-2012;2
+1;;KGM_000845;SL000650;Hardinxveld Noord_P;Pompvijzel;Ampere;40;15;;;14-12-2012;03-10-2022;2
+1;;KGM_000845;SL000650;Hardinxveld Noord_P;Pompvijzel;Snelheid;40;;;;03-10-2022;31-12-2099;2
+1;;KGM_000853;SL000651;Nieuw Lekkerland_P;Pompvijzel;Bedrijfsstatus;85;;;;01-01-1900;24-10-2012;2
+1;;KGM_000853;SL000651;Nieuw Lekkerland_P;Pompvijzel;Ampere;85;89;;;24-10-2012;31-12-2099;2

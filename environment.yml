@@ -1,0 +1,7 @@
+name: FEWS-tools
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - pandas=1.4.3=py39h2e25243_0
+  - python=3.9.12=h6244533_0
